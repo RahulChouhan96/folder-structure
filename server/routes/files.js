@@ -101,4 +101,14 @@ router.get("/search/file", (req, res) => {
         });
 });
 
+// Get list of all files reverse sorted with date
+router.get("/", (req, res) => {
+    File.find({}).sort({ createdAt: -1 }).exec((error, files) => {
+        if (error)
+            res.status(500).json({ message: "Error while fetching files", error });
+        else
+            res.status(200).json(files);
+    });
+});
+
 module.exports = router;
