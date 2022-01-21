@@ -313,3 +313,40 @@ Response -
     "fullPath": "/folder 1/folder 12/File 122.jpeg"
 }
 ```
+
+
+5. GET `/files`
+
+Description - Get list of all files reverse sorted with date.
+
+Response - 
+
+```js
+[
+    {
+        "_id": "61e9fec3859047d0914b752d",
+        "fileName": "File 12",
+        "size": 2298252,
+        "format": "jpeg",
+        "path": [
+            "61e9a353fccfbc2d72f75467"
+        ],
+        "deleted": false,
+        "createdAt": "2022-01-21T00:30:59.581Z",
+        "updatedAt": "2022-01-21T00:30:59.656Z",
+        "__v": 1
+    },
+    {
+        "_id": "61e9c8181524ff1b38872811",
+        "fileName": "mralexgray",
+        "size": 155458,
+        "format": "json",
+        "path": [],
+        "deleted": false,
+        "createdAt": "2022-01-20T20:37:44.072Z",
+        "updatedAt": "2022-01-20T20:37:44.072Z",
+        "__v": 0
+    },
+    ...so on
+]
+```
